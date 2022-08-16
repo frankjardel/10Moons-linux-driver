@@ -109,7 +109,7 @@ Screen:
         return Builder.load_string(kv)
 
     def settings(self):
-        print("settings..")
+        print("settings.. in working..")
 
 
 MainApp().run()

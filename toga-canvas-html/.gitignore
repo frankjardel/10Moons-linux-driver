@@ -65,5 +65,5 @@ android/
 linux/
 django/
 
-src/driver/__pycache__/
-src/teenmoons/__pycache__/
+driver/__pycache__/
+teenmoons/__pycache__/

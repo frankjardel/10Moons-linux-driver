@@ -6,6 +6,7 @@ import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
 
+import os
 import multiprocessing
 import driver
 
@@ -90,14 +91,120 @@ class TeenMoons(toga.App):
             )
         )
 
-        self.canvas = toga.Button(
-            '',
+        # canvas beautiful "GAMBIARRA"
+        directory = "tmoons/"
+        path = os.path.join(".", directory)
+        file_name = 'canvas.html'
+        if (os.path.isdir(directory)):
+            pass
+        else:
+            os.mkdir(path)
+
+        html = """
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>
+		Canvas & EcmaScript
+	</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		html,
+		body,
+		#screen {
+			width: 100%;
+			height: 100%;
+			border-radius:10px;
+			background-color: #373737;
+		}
+		canvas {
+			background: lightgray;
+			overflow-y: hidden;
+			position: fixed;
+		}
+		#erase {
+			position:absolute;
+			color:red;
+			right:10px;
+			font-size:50pt;
+			z-index: 999;
+		}
+	</style>
+</head>
+<body>
+<div id="screen">
+	<div id="erase">&#10008;</div>
+	<canvas id="canvas"></canvas>
+</div>
+<script type="text/javascript">
+	let isDrawing = false
+	let x = 0
+	let y = 0
+
+	const canvas = document.getElementById("canvas")
+	const context = canvas.getContext("2d")
+
+	let screen = document.getElementById("screen")
+	canvas.setAttribute("width", screen.offsetWidth)
+	canvas.setAttribute("height", screen.offsetHeight)
+
+	canvas.addEventListener("mousedown", event => {
+		x = event.offsetX
+		y = event.offsetY
+		isDrawing = true
+	})
+
+	canvas.addEventListener("mousemove", event => {
+		if (isDrawing === true) {
+			drawLine(context, x, y, event.offsetX, event.offsetY)
+			x = event.offsetX
+			y = event.offsetY
+		}
+	})
+
+	window.addEventListener("mouseup", event => {
+		if (isDrawing === true) {
+			drawLine(context, x, y, event.offsetX, event.offsetY)
+			x = 0
+			y = 0
+			isDrawing = false
+		}
+	})
+
+	function drawLine(context, x1, y1, x2, y2) {
+		context.beginPath()
+		context.strokeStyle = "black"
+		context.lineWidth = 1
+		context.moveTo(x1, y1)
+		context.lineTo(x2, y2)
+		context.stroke()
+		context.closePath()
+	}
+
+	const erase = document.getElementById("erase")
+	erase.addEventListener("mousedown", event => {
+		context.clearRect(0, 0, canvas.width, canvas.height);
+	})
+
+	console.log("Easter egg!")
+</script>
+</body>
+</html>
+        """
+
+        file = open(directory+file_name, 'w')
+        file.write(html)
+
+        self.canvas = toga.WebView(
+            # url='file:///home/jardel/projects/10moons/src/canvas.html',
+            url="file:///" + os.path.dirname(os.path.abspath(directory + file_name)) + "/" + file_name,
             style=Pack(
-                width=625,
                 height=415,
-                padding=5,
-                padding_left=0,
-                background_color="BLACK"
+                padding=5
             )
         )
         main_box.add(self.canvas)

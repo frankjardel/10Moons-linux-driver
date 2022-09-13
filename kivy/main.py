@@ -16,6 +16,7 @@ class ContentNavigationDrawer(MDCard):
             Color(1,1,0,.5, mode='rgba')
             self.rect = Ellipse(pos=(0, 0), size=(10, 10))
 
+
     def on_touch_down(self, touch):
         if self.collide_point(*touch.pos):
             self.rect.pos = touch.pos
@@ -25,6 +26,7 @@ class ContentNavigationDrawer(MDCard):
                 Ellipse(pos=(touch.pos), size=(10, 10))
         else:
             self.canvas.clear()
+
 
     def on_touch_move(self, touch):
         if self.collide_point(*touch.pos):
@@ -107,6 +109,7 @@ Screen:
         '''
 
         return Builder.load_string(kv)
+
 
     def settings(self):
         print("settings.. in working..")

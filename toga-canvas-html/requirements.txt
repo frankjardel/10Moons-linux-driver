@@ -1,3 +1,5 @@
 evdev==1.2.0
 pyusb==1.0.2
 keyboard==0.13.5
+briefcase==0.3.12
+toga==0.3.0

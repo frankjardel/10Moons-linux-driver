@@ -24,7 +24,7 @@ Driver for Table 10Moons for Linux
 
 ## activate environment
 
-source environment/bin/activate
+source env/bin/activate
 
 
 ## install (all)
@@ -40,11 +40,11 @@ source environment/bin/activate
 ## Generate .AppImage
 ==================
 
-update pyproject.toml
+### update pyproject.toml
 
 ~$ briefcase update -d
 
-build
+## build
 
 ~$ briefcase build
 

@@ -64,16 +64,16 @@ Screen:
 
                 MDRaisedButton:
                     id: button1
-                    text: "Ctrl+Shift+L"
+                    text: "Ctrl+Shift+K"
                     pos_hint: {"center_x": .1, "center_y": 1}
-                    on_release: app.settings()
+                    on_release: app.settings("button1")
                     md_bg_color: (.1, .1, .1, 1)
 
                 MDRaisedButton:
                     id: button2
                     text: "Ctrl+Shift+P"
                     pos_hint: {"center_x": .3, "center_y": 1}
-                    on_release: app.settings()
+                    on_release: app.settings("button2")
                     md_bg_color: (.1, .1, .1, 1)
 
                 MDLabel:
@@ -82,17 +82,17 @@ Screen:
                     pos_hint: {"center_x": 1, "center_y": 1}
 
                 MDRaisedButton:
-                    id: button1
+                    id: button3
                     text: "Ctrl+Z"
                     pos_hint: {"center_x": 1, "center_y": 1}
-                    on_release: app.settings()
+                    on_release: app.settings("button3")
                     md_bg_color: (.1, .1, .1, 1)
 
                 MDRaisedButton:
-                    id: button2
+                    id: button4
                     text: "Ctrl+Shift+Z"
                     pos_hint: {"center_x": 1, "center_y": 1}
-                    on_release: app.settings()
+                    on_release: app.settings("button4")
                     md_bg_color: (.1, .1, .1, 1)
 
 
@@ -111,8 +111,8 @@ Screen:
         return Builder.load_string(kv)
 
 
-    def settings(self):
-        print("settings.. in working..")
+    def settings(self, button):
+        print(button)
 
 
 MainApp().run()

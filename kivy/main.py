@@ -64,7 +64,7 @@ Screen:
 
                 MDRaisedButton:
                     id: button1
-                    text: "Ctrl+Shift+K"
+                    text: "Ctrl+Shift+Y"
                     pos_hint: {"center_x": .1, "center_y": 1}
                     on_release: app.settings("button1")
                     md_bg_color: (.1, .1, .1, 1)

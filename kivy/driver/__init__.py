@@ -95,7 +95,7 @@ def start():
                     act = evdev.ecodes.ecodes[key]
 
                     if pressed == 0:
-                        keyboard.press('ctrl+shift+k')
+                        keyboard.press('ctrl+shift+y')
 
                     if pressed == 1:
                         keyboard.press('ctrl+shift+p')
@@ -107,7 +107,7 @@ def start():
                         keyboard.press_and_release('ctrl+shift+z')
 
                     if press_type == 0:
-                        keyboard.release('ctrl+shift+k')
+                        keyboard.release('ctrl+shift+y')
                         keyboard.release('ctrl+shift+p')
 
                     vpen.write(evdev.ecodes.EV_KEY, act, press_type)

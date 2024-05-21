@@ -12,7 +12,7 @@ import keyboard
 
 def start():
     config = {'xinput_name': '10moons-pen', 'vendor_id': 2290, 'product_id': 26641,
-     'pen': {'max_x': 4096, 'max_y': 4096, 'max_pressure': 2047, 'resolution_x': 20, 'resolution_y': 30},
+     'pen': {'max_x': 4096, 'max_y': 4096, 'max_pressure': 4094, 'resolution_x': 20, 'resolution_y': 30},
      'actions': {'pen': 'BTN_TOOL_PEN', 'sylus': 'BTN_STYLUS', 'pen_touch': 'BTN_TOUCH',
                  'tablet_buttons': ['KEY_LEFTCTRL+KEY_Z', 'KEY_LEFTCTRL+KEY_A', 'KEY_C', 'KEY_D']}}
 

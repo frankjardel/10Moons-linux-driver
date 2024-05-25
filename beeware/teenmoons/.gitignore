@@ -44,6 +44,7 @@ lib64/
 parts/
 sdist/
 var/
+*.dist-info/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -57,13 +58,5 @@ var/
 ## mpeltonen/sbt-idea plugin
 .idea_modules/
 
-# Briefcase build directories
-iOS/
-macOS/
-windows/
-android/
-linux/
-django/
-
-src/driver/__pycache__/
-src/teenmoons/__pycache__/
+# Briefcase log files
+logs/

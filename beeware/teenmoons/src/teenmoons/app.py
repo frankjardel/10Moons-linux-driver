@@ -1,20 +1,19 @@
 """
-Driver for Table 10Moons for Linux
+Driver for 10moons on Linux
 """
 
 import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
 
+import os
 import multiprocessing
 import driver
 
 
-class TeenMoons(toga.App):
-
+class teenmoons(toga.App):
     def startup(self):
-        """
-        Construct and show the Toga application.
+        """Construct and show the Toga application.
 
         Usually, you would add your application to a main content box.
         We then create a main window (with a name matching the app), and
@@ -124,4 +123,4 @@ class TeenMoons(toga.App):
 
 
 def main():
-    return TeenMoons()
+    return teenmoons()

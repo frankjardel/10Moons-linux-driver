@@ -1,5 +1,5 @@
 """
-Driver for 10moons on Linux
+Driver 10 Moons t503 - for Linux
 """
 
 import toga
@@ -11,7 +11,7 @@ import multiprocessing
 import driver
 
 
-class teenmoons(toga.App):
+class TenMoons(toga.App):
     def startup(self):
         """Construct and show the Toga application.
 
@@ -123,4 +123,4 @@ class teenmoons(toga.App):
 
 
 def main():
-    return teenmoons()
+    return TenMoons()

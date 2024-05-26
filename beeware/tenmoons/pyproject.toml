@@ -1,19 +1,22 @@
 # This project was generated with 0.3.18 using template: https://github.com/beeware/briefcase-template@v0.3.18
 [tool.briefcase]
-project_name = "teenmoons"
-bundle = "dev.underdogz"
+project_name = "TenMoons"
+bundle = "underdogz.dev"
 version = "0.0.1"
-url = "https://underdogz.dev/teenmoons"
+url = "https://dev.underdogz/tenmoons"
 license = "MIT license"
 author = "frankjardel"
 author_email = "jardelfrank42@gmail.com"
 
-[tool.briefcase.app.teenmoons]
-formal_name = "teenmoons"
-description = "Driver for 10moons on Linux"
+[tool.briefcase.app.tenmoons]
+formal_name = "TenMoons"
+description = "Driver 10 Moons t503 - for Linux"
 long_description = """More details about the app should go here.
 """
-sources = ["src/teenmoons", "src/driver"]
+sources = [
+    "src/tenmoons",
+    "src/driver",
+]
 test_sources = [
     "tests",
 ]
@@ -27,19 +30,19 @@ test_requires = [
     "pytest",
 ]
 
-[tool.briefcase.app.teenmoons.macOS]
+[tool.briefcase.app.tenmoons.macOS]
 universal_build = true
 requires = [
     "toga-cocoa~=0.4.0",
     "std-nslog~=1.0.0",
 ]
 
-[tool.briefcase.app.teenmoons.linux]
+[tool.briefcase.app.tenmoons.linux]
 requires = [
     "toga-gtk~=0.4.0",
 ]
 
-[tool.briefcase.app.teenmoons.linux.system.debian]
+[tool.briefcase.app.tenmoons.linux.system.debian]
 system_requires = [
     # Needed to compile pycairo wheel
     "libcairo2-dev",
@@ -58,7 +61,7 @@ system_runtime_requires = [
     # "gir1.2-webkit2-4.1",
 ]
 
-[tool.briefcase.app.teenmoons.linux.system.rhel]
+[tool.briefcase.app.tenmoons.linux.system.rhel]
 system_requires = [
     # Needed to compile pycairo wheel
     "cairo-gobject-devel",
@@ -77,7 +80,7 @@ system_runtime_requires = [
     # "webkit2gtk3",
 ]
 
-[tool.briefcase.app.teenmoons.linux.system.suse]
+[tool.briefcase.app.tenmoons.linux.system.suse]
 system_requires = [
     # Needed to compile pycairo wheel
     "cairo-devel",
@@ -96,7 +99,7 @@ system_runtime_requires = [
     # "libwebkit2gtk3", "typelib(WebKit2)",
 ]
 
-[tool.briefcase.app.teenmoons.linux.system.arch]
+[tool.briefcase.app.tenmoons.linux.system.arch]
 system_requires = [
     # Needed to compile pycairo wheel
     "cairo",
@@ -123,7 +126,7 @@ system_runtime_requires = [
     # "webkit2gtk",
 ]
 
-[tool.briefcase.app.teenmoons.linux.appimage]
+[tool.briefcase.app.tenmoons.linux.appimage]
 manylinux = "manylinux_2_28"
 
 system_requires = [
@@ -144,24 +147,24 @@ linuxdeploy_plugins = [
     "DEPLOY_GTK_VERSION=3 gtk",
 ]
 
-[tool.briefcase.app.teenmoons.linux.flatpak]
+[tool.briefcase.app.tenmoons.linux.flatpak]
 flatpak_runtime = "org.gnome.Platform"
 flatpak_runtime_version = "45"
 flatpak_sdk = "org.gnome.Sdk"
 
-[tool.briefcase.app.teenmoons.windows]
+[tool.briefcase.app.tenmoons.windows]
 requires = [
     "toga-winforms~=0.4.0",
 ]
 
 # Mobile deployments
-[tool.briefcase.app.teenmoons.iOS]
+[tool.briefcase.app.tenmoons.iOS]
 requires = [
     "toga-iOS~=0.4.0",
     "std-nslog~=1.0.0",
 ]
 
-[tool.briefcase.app.teenmoons.android]
+[tool.briefcase.app.tenmoons.android]
 requires = [
     "toga-android~=0.4.0",
 ]
@@ -176,7 +179,7 @@ build_gradle_dependencies = [
 ]
 
 # Web deployments
-[tool.briefcase.app.teenmoons.web]
+[tool.briefcase.app.tenmoons.web]
 requires = [
     "toga-web~=0.4.0",
 ]

@@ -1,5 +1,11 @@
-Driver for Table 10Moons on Linux
+# Driver for Table 10Moons on Linux
 =================================
+
+## Dependencies
+
+### Ubuntu...
+
+$ sudo apt install git build-essential pkg-config python3-dev libgirepository1.0-dev libcairo2-dev gir1.2-gtk-3.0 libcanberra-gtk3-module
 
 ** Create Package
 

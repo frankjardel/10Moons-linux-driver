@@ -13,7 +13,7 @@ description = "Driver for Table 10Moons for Linux"
 icon = "src/teenmoons/resources/teenmoons"
 sources = ['src/teenmoons', 'src/driver']
 requires = [
-    'evdev==1.2.0',
+    'evdev==1.7.1',
     'pyusb==1.0.2',
     'keyboard==0.13.5',
 ]

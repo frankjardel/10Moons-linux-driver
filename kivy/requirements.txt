@@ -1,6 +1,6 @@
 evdev==1.7.1
 pyusb==1.0.2
 keyboard==0.13.5
-Kivy==2.3.0
+Kivy==2.3.1
 kivymd==1.2.0
-pyinstaller==6.7.0
+pyinstaller==6.13.0
